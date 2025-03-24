@@ -1,0 +1,49 @@
+<header>
+    <!-- Home Icon and "To Do List" -->
+    <div class="nav-log">
+        <i class="fa-solid fa-house" style="color: #FFD43B;"></i>
+        <div class="nav-text">
+            <h4>To Do</h4>
+            <h4>List</h4>
+        </div>
+    </div>
+
+    <!-- Input and Search button with Icon -->
+    <div class="nav-search">
+        <input type="text" name="Search" placeholder="To do list">
+        <button class="search-icon">
+            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+        </button>
+    </div>
+
+    <!-- Sortby -->
+    <div class="sortby">
+        <button class="sortby-dots" onclick="toggleSortby()">
+            <i class="fa-solid fa-ellipsis-vertical" style="color: #FFD43B;"></i>
+        </button>
+
+        <div id="sortbyMenu">
+            <!-- Sorting by Date  -->
+            <div class="nav-date">
+                <input type="date" name="data">
+            </div>
+
+            <!-- Sorting by Category -->
+            <div class="nav-category">
+                <div class="category-icon">
+                    <i class="fa-solid fa-folder-open" id="dots" style="color: #FFD43B;"></i>
+                </div>
+                <select name="category" id="category-select">
+                    <option value="">Select category---</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Health">Health & Fitness</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Goals">Goals</option>
+                    <option value="Events">Events</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</header>

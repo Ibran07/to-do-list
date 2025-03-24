@@ -1,0 +1,173 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    background-color: #222831;
+    padding: 0.5rem 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav-logo */
+.nav-log{
+    color: #EEEEEE;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-log i{
+    font-size: 1.5rem;
+    padding-right: 0.2em;
+}
+/* Hover Effect on Nav-log */
+.nav-log:hover{
+    border: 1px solid #00ADB5;
+    cursor: pointer;
+}
+
+/* Nav-Search */
+.nav-search{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-search input{
+    width: 90%;
+    padding: 0.75rem;
+
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.search-icon {
+    background-color: #FFD43B;
+    width: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.nav-search input,
+.search-icon {
+    height: 2rem; 
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+.nav-search i{
+    font-size: 1.2rem;
+}
+/* Hover Effect on Nav-log */
+.nav-search:hover{
+    border: 2px solid #00ADB5;
+    cursor: pointer;
+}
+
+/* Sortby */
+.sortby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+    position: relative;
+}
+/* Sortby Menu */
+#sortbyMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* Category */
+.nav-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-date input, .nav-category select, .category-icon{
+    height: 2rem;
+}
+.nav-date input{
+    border-radius: 3px;
+}
+.category-icon{
+    font-size: 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#category-select {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* Media query for mobo Screen */
+/* Sort by Menu */
+
+.sortby-dots {
+    display: none;
+}
+
+/* i am using 600px bcz Larger Phones/Small Tablets: Some consider 600px and up as a breakpoint for larger phones or small tablets.  */
+@media screen and (max-width: 600px) {
+    .sortby-dots {
+        display: block;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Hide sorting options by default */
+    .nav-date, .nav-category {
+        display: none;
+    }
+
+    /* When active, show sorting options */
+    #sortbyMenu.active .nav-date,
+    #sortbyMenu.active .nav-category {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Hiding the button till the button was not click */
+    #sortbyMenu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 3px;
+        right: 0px;
+        background-color: #fff;
+        padding: 0.5rem;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    /* Showning menu when 3 dots was click */
+    #sortbyMenu.active{
+        display: flex;
+    }
+
+    /* Hiding Folder icon when it show as menu */
+    .category-icon {
+        display: none;
+    }
+}
+
