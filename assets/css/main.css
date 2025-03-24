@@ -1,0 +1,66 @@
+body {
+    background-color: #e8f0f9;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Div for To Do */
+.toDo , .Category{
+    /* background-color: #f7f8f9 ; */
+    background-color: #ECEEF3;
+    width: 45vw;
+    min-height: 45vh;
+    position: relative;
+    border: 2px solid rgb(153, 108, 108);
+}
+
+.toDo{
+    margin-left: 2em;
+}
+.Category {
+    margin-right: 2em;
+}
+/* Heading */
+.toDo-heading {
+    color: #222222 ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em;
+}
+
+/* Button (Adding and Deleting) */
+.toDo-AddDel {
+    width: 100%;
+    padding: 0.5em;
+    position: absolute;
+    bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toDo-AddDel button i {
+    font-size: 1.3rem;
+}
+.toDo-AddDel button i:hover{
+    cursor: pointer;
+}
+
+.toDo-list ul li{
+    width: 95%;
+    padding: 0.3em;
+    margin-left: 0.4em;
+    margin-bottom: 0.5em;
+    list-style-type: none;
+    font-size: 1.em;
+    font-weight: 500;
+
+    background-color: white;
+    border: 1px solid rgba(88, 63, 63, 0.3);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 2px rgba(88, 63, 63, 0.3);
+}

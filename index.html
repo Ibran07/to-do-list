@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List</title>
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -12,7 +13,45 @@
     <div id="header"></div>
 
     <!-- Container For Main -->
-     
+    <main>
+        <section>
+            <!-- Showing all list of to-do-list and sorting is done in this div-->
+            <div class="toDo">
+                <div class="toDo-heading">
+                    <h2>To Do</h2>
+                    <div id="toDo-num">2</div>
+                </div>
+                
+                <!-- Containing all list -->
+                <div class="toDo-list">
+                    <ul>
+                        <li>User Search for Design and Sprit</li>
+                        <li>hello world</li>
+                    </ul>
+                </div>
+
+                <div class="toDo-AddDel">
+                    <div class="btn-adding">
+                        <button type="button" id="adding">
+                            <i class="fa-solid fa-plus" style="color: #FFD43B;"></i>
+                        </button>
+                    </div>
+
+                    <div class="btn-deleting">
+                        <button type="button" id="deleting">
+                            <i class="fa-solid fa-trash" style="color: #FFD43B;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showing all list category -->
+             <div class="Category">
+                <h2>Category</h2>
+             </div>
+        </section>
+    </main> 
+
     <!-- Container for Footer html -->
     <div id="footer"></div>
 
