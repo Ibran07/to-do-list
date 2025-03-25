@@ -60,11 +60,24 @@ section {
     margin-left: 0.4em;
     margin-bottom: 0.5em;
     list-style-type: none;
-    font-size: 1.em;
+    font-size: 1em;
     font-weight: 500;
 
     background-color: white;
     border: 1px solid rgba(88, 63, 63, 0.3);
     border-radius: 6px;
     box-shadow: 2px 2px 2px 2px rgba(88, 63, 63, 0.3);
+}
+
+/* Media Query for mobo screen */
+@media screen and (max-width: 600px) {
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    .toDo, .Category{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 1.5em;
+    }
 }
