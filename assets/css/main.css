@@ -2,6 +2,10 @@ body {
     background-color: #e8f0f9;
 }
 
+main{
+    margin-top: 9vh;
+}
+
 section {
     display: flex;
     justify-content: space-around;
