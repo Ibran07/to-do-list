@@ -71,6 +71,7 @@ section {
 /* Article tag which contain a popup display when user click on + icon */
 /* NavBar */
 .editTask{
+    display: none;
     width: 80%;
     margin: auto;
     padding-bottom: 0.1em;
@@ -140,6 +141,7 @@ section {
 
 /* Edit Task box Category and date */
 .editTask-category {
+    display: none;
     width: 100%;
     margin-bottom: 2em;
     display: flex;
