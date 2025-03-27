@@ -24,7 +24,7 @@ crossbtn.addEventListener("click", () => {
 
 //Hide the Edit Task bar with reset the values inside it
 cancel.addEventListener("click", () => {
-    editTask.style.display = "none"
+    editTask.style.display = "none";
 
     //Reseting values
     document.querySelector("#title").value = "";
@@ -58,14 +58,13 @@ update.addEventListener("click", function addTask() {
     
     let tasks = getTask();
     tasks.unshift({title, desc, category, date});
-    console.log(tasks);
     saveTask(tasks);
     //Showing Only title on to do box
     showTitle();
     
     //Clear the inputs after store them
-    document.querySelector("#title").value = ""
-    document.querySelector("#desc").value = ""
+    document.querySelector("#title").value = "";
+    document.querySelector("#desc").value = "";
     document.querySelector("#editTask-category").value = "";
     
     //Hiding the Edit Task popup
@@ -74,8 +73,14 @@ update.addEventListener("click", function addTask() {
 
 //Showing Only title on to do box
 function showTitle() {
-    let task = getTask();
-    let li = document.createElement("li");
-    li.textContent = task[0].title;
-    document.getElementById("toDo-order").prepend(li);
+    let tasks = getTask();
+    let ul = document.getElementById("toDo-order");
+    ul.innerHTML = "";
+    tasks.forEach(task => {
+        let li = document.createElement("li");
+        li.innerText = task.title;
+        ul.appendChild(li);
+    });
+    document.getElementById("toDo-num").innerText = ul.children.length;
 }
+document.addEventListener("DOMContentLoaded", showTitle);
