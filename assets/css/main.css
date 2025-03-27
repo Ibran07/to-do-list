@@ -138,7 +138,7 @@ section {
 /* Edit Task box Category and date */
 .editTask-category {
     width: 100%;
-    /* margin-bottom: 2em; */
+    margin-bottom: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
