@@ -8,6 +8,9 @@ const cancel = document.querySelector("#cancel");
 const update = document.querySelector("#update");
 const currDate = document.querySelector("#category-date");
 
+//Showing how many list are present in Ul tag
+const ul = document.getElementById("toDo-order");
+document.getElementById("toDo-num").innerText = ul.children.length;
 
 // Display Edit Task bar
 ADD.addEventListener("click", () => {
@@ -75,8 +78,4 @@ function showTitle() {
     let li = document.createElement("li");
     li.textContent = task[0].title;
     document.getElementById("toDo-order").prepend(li);
-
-    //Showing how many list are present in Ul tag
-    const ul = document.getElementById("toDo-order");
-    document.getElementById("toDo-num").innerText = ul.children.length;
 }
