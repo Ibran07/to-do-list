@@ -50,6 +50,59 @@
                 <h2>Category</h2>
              </div>
         </section>
+
+        <article>
+            <div class="editTask">
+                <div class="editTask-navbar">
+                    <!-- navbar for icon and heading-->
+                    <div class="nav-heading">
+                        <i class="fa-solid fa-file-pen" style="color: #FFD43B;"></i>
+                        <h3>Edit Task</h3>
+                    </div>
+
+                    <button type="button" class="nav-crossbtn">
+                        <i class="fa-solid fa-xmark" style="color: #FFD43B;"></i>
+                    </button>
+                </div>
+
+                <div class="editTask-box">
+                    <div class="box-title">
+                        <label for="title"><h4>Title :</h4></label>
+                        <input type="text" id="title" name="title" autofocus>
+                    </div>
+
+                    <div class="box-desc">
+                        <h4>Description</h4>
+                        <textarea name="desc" id="desc"></textarea>
+                    </div>
+                </div>
+
+                <div class="editTask-category">
+                    <div class="category-box">
+                        <h4>Category</h4>
+                        <select name="editTask-category" id="editTask-category" required>
+                            <option value="">Select Category---</option>
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Health">Health & Fitness</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Goals">Goals</option>
+                            <option value="Events">Events</option>
+                        </select>
+                    </div>
+
+                    <div class="category-date">
+                        <h4>Date</h4>
+                        <input type="date" name="category-date">
+                    </div>
+                </div>
+
+                <div class="editTask-btn">
+                    <button type="button">Update</button>
+                    <button type="button">Cancel</button>
+                </div>
+            </div>
+        </article>
     </main> 
 
     <!-- Container for Footer html -->

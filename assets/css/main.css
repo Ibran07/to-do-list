@@ -9,11 +9,11 @@ main{
 section {
     display: flex;
     justify-content: space-around;
+    position: absolute;
 }
 
 /* Div for To Do */
 .toDo , .Category{
-    /* background-color: #f7f8f9 ; */
     background-color: #ECEEF3;
     width: 45vw;
     min-height: 45vh;
@@ -69,6 +69,107 @@ section {
     box-shadow: 2px 2px 2px 2px rgba(88, 63, 63, 0.3);
 }
 
+/* Article tag which contain a popup display when user click on + icon */
+/* NavBar */
+.editTask{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 0.1em;
+    background-color: #d3d7db;
+    position: relative;
+}
+.editTask-navbar{
+    width: 100%;
+    padding: 0.5em 1em;
+    background-color: #222222;
+    color: #e8f0f9;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+.nav-crossbtn{
+    background-color: #222222;
+    font-size: 1.2em;
+}
+.nav-crossbtn:hover {
+    border: 1px solid #00ADB5;
+    cursor: pointer;
+}
+
+/* Edit Task Box */
+.editTask-box, .editTask-category{
+    padding: 0.5em 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+/* Edit Task box Title & Description */
+.box-title, .box-desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    gap: 0.2em;
+    margin-bottom: 1em;
+}
+.box-title input{
+    min-height: 2em;
+    padding-left: 0.5em;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(88, 63, 63, 0.3);
+}
+
+/* Edit Task box Description */
+#desc {
+    padding: 1em 0.7em;
+    min-height: 8em;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(88, 63, 63, 0.3);
+    line-height: 1.5em;
+}
+
+/* Edit Task box Category and date */
+.editTask-category {
+    width: 100%;
+    /* margin-bottom: 2em; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.category-box select, .category-date input{
+    min-height: 2em;
+    padding: 0.2em 0.5em;
+    margin: 0.5em 0em;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(88, 63, 63, 0.3);
+}
+
+/* EditCategory Button */
+.editTask-btn {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 1em;
+}
+.editTask-btn button{
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px rgba(88, 63, 63, 0.3);
+    background-color: rgba(112, 132, 175, 0.527);
+}
+
+.editTask-btn button:hover{
+    background-color: rgba(9, 65, 185, 0.527);
+    cursor: pointer;
+}
 /* Media Query for mobo screen */
 @media screen and (max-width: 600px) {
     section{
