@@ -103,5 +103,28 @@ function showTask (task) {
     document.getElementById("box-date").innerText = task.date;
 }
 
+//Delete
+DEL.addEventListener("click", () => {
+    let currTitle = document.getElementById("taskDetail-title").innerText.trim();
+    let tasks = getTask();
+
+    if (tasks.length != 0){
+        const str = prompt("If you want to Delete Selected List then type 'Delete'");
+        
+        if ("Delete" == str){
+            let updateList = tasks.filter(task => task.title !== currTitle);
+
+            saveTask(updateList);
+            showTitle();
+        }
+        else{
+            alert("NO Task Selected to Delete!")
+        }
+    }
+    else (
+        alert("List is empty, Nothing to Delete!")
+    )
+})
+
 //Render all detail when browser is load
 document.addEventListener("DOMContentLoaded", showTitle);
