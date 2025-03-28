@@ -72,15 +72,36 @@ update.addEventListener("click", function addTask() {
 })
 
 //Showing Only title on to do box
-function showTitle() {
-    let tasks = getTask();
-    let ul = document.getElementById("toDo-order");
+function showTitle () {
+    const tasks = getTask();
+    const ul = document.getElementById("toDo-order");
     ul.innerHTML = "";
-    tasks.forEach(task => {
+
+    tasks.forEach((task , index) => {
         let li = document.createElement("li");
         li.innerText = task.title;
-        ul.appendChild(li);
+        ul.append(li);
+
+        //When title of To Do box Click it will appear on Task Detail with show (Title, Desc , category and date)
+        li.addEventListener("click", () => {
+            showTask(task);
+        })
     });
     document.getElementById("toDo-num").innerText = ul.children.length;
+
+    //Show Detail of newly add li by defualt
+    if (tasks.length > 0){
+        showTask(tasks[0]);
+    }
 }
+
+//Function to Show Task detail in Task Detail box
+function showTask (task) {
+    document.getElementById("taskDetail-title").innerText = task.title;
+    document.getElementById("taskDetail-desc").innerText = task.desc;
+    document.getElementById("box-category").innerText = task.category;
+    document.getElementById("box-date").innerText = task.date;
+}
+
+//Render all detail when browser is load
 document.addEventListener("DOMContentLoaded", showTitle);
