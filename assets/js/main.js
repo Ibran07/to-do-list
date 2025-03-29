@@ -36,6 +36,14 @@ cancel.addEventListener("click", () => {
 const today = new Date().toISOString().split("T")[0];
 currDate.value = today;
 
+document.addEventListener("DOMContentLoaded", async () => {
+    document.getElementById("header").innerHTML = await (await fetch("components/header.html")).text();
+    const navDate = document.querySelector("#nav-currDate");
+    navDate.value = new Date().toISOString().split("T")[0];
+});
+
+
+
 //Storing Task Detail in local storage
 function saveTask (tasks) {
     localStorage.setItem("tasks", JSON.stringify(tasks));
